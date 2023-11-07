@@ -34,6 +34,14 @@ def multiplicación(multiplicando, multiplicador):
     return multiplicando * multiplicador
 
 def división(dividendo, divisor):
+    """
+    Esta función realiza una división de dos números.
+    Args:
+    dividendo (int): El número que será dividido.
+    divisor (int): El número por el cual se divide.
+    Returns:
+    int: La division entre dividendo y divisor.
+    """
     return dividendo / divisor
 
 def cociente(dividendo, divisor):
