@@ -44,12 +44,25 @@ def funcion_seno(angulo_grados):
     angulo_radianes = math.radians(angulo_grados)
     return math.sin(angulo_radianes)
 
+def funcion_coseno(angulo_grados):
+    """
+    Calcula el coseno de un ángulo en grados.
+
+    Args:
+    angulo_grados (float): El ángulo en grados.
+
+    Returns:
+    float: El valor del coseno del ángulo.
+    """
+    angulo_radianes = math.radians(angulo_grados)
+    return math.cos(angulo_radianes)
+
 def main():
     resultado = 0
     print("Ingrese el número de la opcion de la operacion avanzada que desea realizar: ")
-    operacion = int(input("1 = logaritmo en base 10, 2 = logaritmo en base x, 3 = logaritmo natural, 4 = función seno: "))
+    operacion = int(input("1 = logaritmo en base 10, 2 = logaritmo en base x, 3 = logaritmo natural, 4 = función seno, 5 = función coseno: "))
 
-    if (operacion < 1 or operacion > 4):
+    if (operacion < 1 or operacion > 5):
         return print("Opción no válida")
     else:
         if (operacion in [1, 2, 3]):
@@ -69,7 +82,9 @@ def main():
             
             if (operacion == 4):
                 resultado = funcion_seno(angulo_grados)
-
+            elif (operacion == 5):
+                resultado = funcion_coseno(angulo_grados)
+                
         print(f"El resultado de la operación es: {resultado}")
 
 main()
