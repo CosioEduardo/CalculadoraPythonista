@@ -79,12 +79,25 @@ def raíces(radicando, indice):
     """
     return radicando ** (1/indice)
 
+def potencias(base, exponente):
+    """
+    Esta función calcula una potencia.
+
+    Args:
+    base (float): La base de la potencia.
+    exponente (float): El exponente al que se elevará la base.
+
+    Returns:
+    float: El resultado de elevar la base al exponente.
+    """
+    return base ** exponente
+
 def main():
     resultado = 0
     print("Ingrese el número de la opcion de la operacion basica que desea realizar: ")
-    operacion = int(input("1 = suma, 2 = resta, 3 = multiplicación, 4 = división, 5 = cociente, 6 = resto, 7 = raiz: "))
+    operacion = int(input("1 = suma, 2 = resta, 3 = multiplicación, 4 = división, 5 = cociente, 6 = resto, 7 = raiz, 8 = potencia: "))
 
-    if (operacion < 1 or operacion > 7):
+    if (operacion < 1 or operacion > 8):
         return print("Opción no válida")
     else:
         if (operacion == 1): 
@@ -127,7 +140,11 @@ def main():
                 return print("Error en el calculo de la raiz: El indice no puede ser 0")
 
             resultado = raíces(radicando, indice)
-
+        elif (operacion == 8): 
+            base = float(input("base: "))
+            exponente = float(input("exponente: "))
+            resultado = potencias(base, exponente)
+            
         print(f"El resultado de la operacion es: {resultado}")
 
 main()
