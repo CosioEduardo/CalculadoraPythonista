@@ -99,27 +99,18 @@ def main():
             multiplicando = int(input("multiplicando: "))
             multiplicador = int(input("multiplicador: "))
             resultado = multiplicación(multiplicando, multiplicador)
-        elif (operacion == 4):
+        elif (operacion in [4, 5, 6]):
             dividendo = int(input("dividendo: "))
             divisor = int(input("divisor: "))
             if ( divisor == 0 ):
                 return print("Error en la division: No se puede dividir por cero")
-
-            resultado = división(divisor, divisor)
-        elif (operacion == 5):
-            dividendo = int(input("dividendo: "))
-            divisor = int(input("divisor: "))
-            if ( divisor == 0 ):
-                return print("Error en la division: No se puede dividir por cero")
-
-            resultado = cociente(dividendo, divisor)
-        elif (operacion == 6):
-            dividendo = int(input("dividendo: "))
-            divisor = int(input("divisor: "))
-            if ( divisor == 0 ):
-                print("Error en la division: No se puede dividir por cero")
-                
-            resultado = resto(dividendo, divisor)
+                                
+            elif (operacion == 4):
+                resultado = división(dividendo, divisor)
+            elif (operacion == 5):
+                resultado = cociente(dividendo, divisor)
+            elif (operacion == 6):
+                resultado = resto(dividendo, divisor)
         elif (operacion == 7): 
             radicando = int(input("radicando: "))
             indice = int(input("indice: "))
