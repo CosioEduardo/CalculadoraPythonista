@@ -26,10 +26,10 @@ def multiplicación(multiplicando, multiplicador):
     """
     Esta función realiza una multiplicación de dos números.
     Args:
-    multiplicando (int): El primer número a multiplicar.
-    multiplicador (int): El segundo número a multiplicar.
+    multiplicando (float): El primer número a multiplicar.
+    multiplicador (float): El segundo número a multiplicar.
     Returns:
-    int: El resultado de la multiplicación de multiplicando y multiplicador.
+    float: El resultado de la multiplicación de multiplicando y multiplicador.
     """
     return multiplicando * multiplicador
 
@@ -37,10 +37,10 @@ def división(dividendo, divisor):
     """
     Esta función realiza una división de dos números.
     Args:
-    dividendo (int): El número que será dividido.
-    divisor (int): El número por el cual se divide.
+    dividendo (float): El número que será dividido.
+    divisor (float): El número por el cual se divide.
     Returns:
-    int: La division entre dividendo y divisor.
+    float: La division entre dividendo y divisor.
     """
     return dividendo / divisor
 
@@ -48,10 +48,10 @@ def cociente(dividendo, divisor):
     """
     Esta función calcula el cociente entero de una división.
     Args:
-    dividendo (int): El número que será dividido.
-    divisor (int): El número por el cual se divide.
+    dividendo (float): El número que será dividido.
+    divisor (float): El número por el cual se divide.
     Returns:
-    int: El cociente entero de dividendo entre divisor.
+    float: El cociente entero de dividendo entre divisor.
     """
     return dividendo // divisor
 
@@ -60,11 +60,11 @@ def resto(dividendo, divisor):
     Esta función calcula el resto de una división entera.
 
     Args:
-    dividendo (int): El número que será dividido.
-    divisor (int): El número por el cual se divide.
+    dividendo (float): El número que será dividido.
+    divisor (float): El número por el cual se divide.
 
     Returns:
-    int: El resto de dividendo entre divisor.
+    float: El resto de dividendo entre divisor.
     """
     return dividendo % divisor
 
@@ -72,8 +72,8 @@ def raíces(radicando, indice):
     """
     Esta función calcula la raíz de un número.
     Args:
-    radicando (int): El número del cual se calculará la raíz.
-    indice (int): El índice de la raíz (por ejemplo, 2 para la raíz cuadrada).
+    radicando (float): El número del cual se calculará la raíz.
+    indice (float): El índice de la raíz (por ejemplo, 2 para la raíz cuadrada).
     Returns:
     float: El resultado de la raíz.
     """
@@ -109,33 +109,33 @@ def main():
                 sustraendo = float(input("sustraendo: "))
                 resultado = resta(minuendo, sustraendo)
         elif (operacion == 3):
-            multiplicando = int(input("multiplicando: "))
-            multiplicador = int(input("multiplicador: "))
+            multiplicando = float(input("multiplicando: "))
+            multiplicador = float(input("multiplicador: "))
             resultado = multiplicación(multiplicando, multiplicador)
         elif (operacion == 4):
-            dividendo = int(input("dividendo: "))
-            divisor = int(input("divisor: "))
+            dividendo = float(input("dividendo: "))
+            divisor = float(input("divisor: "))
             if ( divisor == 0 ):
                 return print("Error en la division: No se puede dividir por cero")
 
             resultado = división(divisor, divisor)
         elif (operacion == 5):
-            dividendo = int(input("dividendo: "))
-            divisor = int(input("divisor: "))
+            dividendo = float(input("dividendo: "))
+            divisor = float(input("divisor: "))
             if ( divisor == 0 ):
                 return print("Error en la division: No se puede dividir por cero")
 
             resultado = cociente(dividendo, divisor)
         elif (operacion == 6):
-            dividendo = int(input("dividendo: "))
-            divisor = int(input("divisor: "))
+            dividendo = float(input("dividendo: "))
+            divisor = float(input("divisor: "))
             if ( divisor == 0 ):
                 print("Error en la division: No se puede dividir por cero")
                 
             resultado = resto(dividendo, divisor)
         elif (operacion == 7): 
-            radicando = int(input("radicando: "))
-            indice = int(input("indice: "))
+            radicando = float(input("radicando: "))
+            indice = float(input("indice: "))
             if ( indice == 0 ):
                 return print("Error en el calculo de la raiz: El indice no puede ser 0")
 
@@ -144,7 +144,7 @@ def main():
             base = float(input("base: "))
             exponente = float(input("exponente: "))
             resultado = potencias(base, exponente)
-            
+
         print(f"El resultado de la operacion es: {resultado}")
 
 main()
